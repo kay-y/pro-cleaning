@@ -12,12 +12,12 @@ interface Props {
 const contactInfos: Props[] = [
     {
         contact_name: 'Call us',
-        contact: "+(08) 255 201 888",
+        contact: "+(01) 255 201 888",
         icon: <Phone />
     },
     {
         contact_name: 'Email Now',
-        contact: "hollo@procleaning.com",
+        contact: "hello@procleaning.com",
         icon: <Mail />
     },
     {
@@ -51,6 +51,7 @@ const Contact = () => {
             }else {
                 toast.error(response.data.message || "Submission failed!")
             }
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
         } catch (er: any) {
             const errorMessage = er.response?.data?.message || "Something went wrong";
             toast.error('Submission Error:', errorMessage);
